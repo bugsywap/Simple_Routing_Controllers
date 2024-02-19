@@ -76,11 +76,11 @@
     color: white;
 }
     </style>
-     <button class="about"><a href="/about_me">About Me</a></button>
-     <button class="about"><a href="/hobbies">Hobbies</a></button>
-     <button class="about"><a href="/skills">Skills</a></button>
+     <button class="about"><a href="{{ route('about_me')}}">About Me</a></button>
+     <button class="about"><a href="{{ route('hobbies')}}">Hobbies</a></button>
+     <button class="about"><a href="{{ route('skills')}}">Skills</a></button>
 
-     <h1>Aq lang itu si {{name}}</h1>
+     <h1>Aq lang itu si {{  $about['name'] }} and I am {{ $about['age']}} years old. Taga {{ $about['address']}}</h1>
 
 
    

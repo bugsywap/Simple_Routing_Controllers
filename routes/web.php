@@ -20,15 +20,10 @@ use App\Http\Controllers\HobbieseController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about_me', function () {
-    return view('about_me');
-});
+Route::get('/about_me' , [AboutmeController::class, 'index'])->name('about_me');
 
-Route::get('/skills', function () {
-    return view('skills');
-});
+Route::get('/hobbies' , [HobbyController::class, 'index'])->name('hobbies');
 
-Route::get('/hobbies', function () {
-    return view('hobbies');
-});
+Route::get('/skills' , [SkillsController::class, 'index'])->name('skills');
+
 

@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 
 class AboutmeController extends Controller
 {
-    public function show($id){
+    public function index(){
 
         $about = array(
-            "id" => $id,
             "name" => "Gabe",
             "age" => "23",
             "address" => "scout barrio"

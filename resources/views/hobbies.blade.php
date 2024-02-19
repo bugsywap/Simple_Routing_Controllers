@@ -8,7 +8,36 @@
 </head>
 <body>
     <style>
-        .about:after {
+        .hobby {
+ appearance: button;
+ background-color: #1899D6;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 15px;
+ font-weight: 700;
+ letter-spacing: .8px;
+ line-height: 20px;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 13px 19px;
+ text-align: center;
+ text-transform: uppercase;
+ touch-action: manipulation;
+ transform: translateZ(0);
+ transition: filter .2s;
+ user-select: none;
+ -webkit-user-select: none;
+ vertical-align: middle;
+ white-space: nowrap;
+}
+
+.hobby:after {
  background-clip: padding-box;
  background-color: #1CB0F6;
  border: solid transparent;
@@ -23,33 +52,44 @@
  z-index: -1;
 }
 
-.about:main, .about:focus {
+.hobby:main, .hobby:focus {
  user-select: auto;
 }
 
-.about:hover:not(:disabled) {
+.hobby:hover:not(:disabled) {
  filter: brightness(1.1);
 }
 
-.about:disabled {
+.hobby:disabled {
  cursor: auto;
 }
 
-.about:active:after {
+.hobby:active:after {
  border-width: 0 0 0px;
 }
 
-.about:active {
+.hobby:active {
  padding-bottom: 10px;
 }
-.about a{
+.hobby a{
     text-decoration: none;
     color: white;
 }
     </style>
-    <button class="about"><a href="/about_me">About Me</a></button>
-    <button class="about"><a href="/hobbies">Hobbies</a></button>
-    <button class="about"><a href="/skills">Skills</a></button>
+    </style>
+    <button class="hobby"><a href="{{ route('about_me')}}">About Me</a></button>
+    <button class="hobby"><a href="{{ route('hobbies')}}">Hobbies</a></button>
+    <button class="hobby"><a href="{{ route('skills')}}">Skills</a></button>
 
+    
+<h1>My hobbies are</h1>
+@foreach ($hData as $hobby)
+<ul>
+    <li>{{$hobby}}</li>
+@endforeach
+</ul>
+
+    
+@endforeach
 </body>
 </html>
