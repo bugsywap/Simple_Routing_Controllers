@@ -83,13 +83,10 @@
 
     
 <h1>My hobbies are</h1>
-@foreach ($hData as $hobby)
+@foreach ($hobbies as $hobby)
 <ul>
     <li>{{$hobby}}</li>
 @endforeach
 </ul>
-
-    
-@endforeach
 </body>
 </html>

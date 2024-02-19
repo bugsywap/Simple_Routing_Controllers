@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutmeController;
 use App\Http\Controllers\SkillsController;
-use App\Http\Controllers\HobbieseController;
+use App\Http\Controllers\HobbiesController;
 
 
 /*
@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 Route::get('/about_me' , [AboutmeController::class, 'index'])->name('about_me');
 
-Route::get('/hobbies' , [HobbyController::class, 'index'])->name('hobbies');
+Route::get('/hobbies' , [HobbiesController::class, 'index'])->name('hobbies');
 
 Route::get('/skills' , [SkillsController::class, 'index'])->name('skills');
 
